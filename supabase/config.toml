@@ -1,0 +1,17 @@
+# Настройки проекта Supabase (применяются командой `supabase config push`)
+project_id = "matematika-sayt"
+
+[auth]
+# Регистрации нет: аккаунты создаёт только учитель через функцию admin-users
+enable_signup = false
+minimum_password_length = 6
+jwt_expiry = 3600
+
+[auth.email]
+# вход по логину и паролю (без писем); регистрацию закрывает auth.enable_signup выше
+enable_signup = true
+enable_confirmations = false
+
+[functions.admin-users]
+# JWT проверяется внутри функции (и для bootstrap он не нужен)
+verify_jwt = false

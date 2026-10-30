@@ -1,0 +1,17 @@
+# секреты и локальные данные — никогда не в репозиторий
+.env
+.env.*
+*.key
+*.pem
+ПЕРВЫЙ-ВХОД.txt
+credentials*.txt
+# сканы книги лежат только в закрытом хранилище Supabase
+img/
+book/img/
+*.webp
+# служебное
+supabase/.temp/
+supabase/.branches/
+node_modules/
+.DS_Store
+Thumbs.db
