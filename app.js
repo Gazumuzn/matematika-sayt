@@ -237,7 +237,7 @@ async function home() {
     .filter((b, i, arr) => arr.findIndex(x => x.key === b.key) === i && (S.solved[b.key] || []).length < S.blocks[b.key].count).slice(0, 3);
   main().innerHTML = `
     <div class="page-head"><div><span class="eyebrow">${new Date().toLocaleDateString('ru-RU', { weekday: 'long', day: 'numeric', month: 'long' })}</span>
-      <h1>Здравствуйте, ${esc(S.me.name.split(' ')[0])}</h1></div>
+      <h1>Здравствуйте, ${esc(S.me.name)}</h1></div>
       <a class="btn" href="#/book">${I.book} Открыть учебник</a></div>
     <div class="hello">
       <div class="card dark level-card">${medal(st.level)}
@@ -286,7 +286,7 @@ async function teacherHome() {
   S.toCheck = waiting.length;
   const lb = students.slice().sort((a, b) => b.xp - a.xp);
   main().innerHTML = `
-    <div class="page-head"><div><span class="eyebrow">Кабинет учителя · ${new Date().toLocaleDateString('ru-RU', { weekday: 'long', day: 'numeric', month: 'long' })}</span><h1>Здравствуйте, ${esc(S.me.name.split(' ')[0])}</h1></div></div>
+    <div class="page-head"><div><span class="eyebrow">Кабинет учителя · ${new Date().toLocaleDateString('ru-RU', { weekday: 'long', day: 'numeric', month: 'long' })}</span><h1>Здравствуйте, ${esc(S.me.name)}</h1></div></div>
     <div class="grid g4" style="margin-bottom:20px">
       <div class="card stat"><b>${students.length}</b><span>учеников</span></div>
       <div class="card stat"><b>${hw.length}</b><span>заданий выдано</span></div>
